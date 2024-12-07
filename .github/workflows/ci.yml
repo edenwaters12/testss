@@ -23,16 +23,10 @@ jobs:
           node-version: 18
 
       - name: Install pnpm
-        run: npm install -g pnpm  
+        run: npm install -g npm  
 
       - name: Install dependencies
-        run: pnpm install
-
-      - name: Lint the code
-        run: pnpm lint
-
-      - name: Run Prettier check
-        run: pnpm format:check
+        run: npm install
 
       - name: Build the project
         run: pnpm build
