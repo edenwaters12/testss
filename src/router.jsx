@@ -18,7 +18,7 @@ const UserForm = React.lazy(() => import("./views/users/UserForm"));
 const Todos = React.lazy(() => import("./views/science/Todos"));
 const TodoForm = React.lazy(() => import("./views/science/TodoForm"));
 const WorkShow = React.lazy(() => import("./views/work/WorkShow"));
-const WorkForm = React.lazy(() => import("./views/work/workForm"));
+const WorkForm = React.lazy(() => import("./views/work/WorkForm"));
 const MoneyForm = React.lazy(() => import("./views/money/MoneyForm"));
 const MoneyShow = React.lazy(() => import("./views/money/MoneyShow"));
 const RowItemShow = React.lazy(() => import("./views/rowItems/RowItems"));
