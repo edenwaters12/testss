@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      
   pull_request:
     branches:
       - main
@@ -22,11 +21,22 @@ jobs:
         with:
           node-version: 18
 
+      - name: Cache pnpm dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
       - name: Install pnpm
-        run: npm install -g npm  
+        run: npm install -g pnpm  
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
+
+      - name: Lint the code
+        run: pnpm lint
 
       - name: Build the project
-        run: npm build  --force
+        run: pnpm run build
