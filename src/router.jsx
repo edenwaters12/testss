@@ -26,8 +26,7 @@ const RowItemFrom = React.lazy(() => import("./views/rowItems/RowItemsFrom"))
 const Logpage = React.lazy(() => import("./views/log/log"));
 const GooglePhotosViewer = React.lazy(() =>
   import("./views/googlePhotos/GooglePhotosViewer")
-);
-
+)
 const router = createBrowserRouter([
   {
     path: "/",
